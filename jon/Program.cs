@@ -16,7 +16,7 @@ namespace aoc_cs
             Console.WriteLine("\nLet's get this thing moving");
             Console.WriteLine($"If we follow the planned course we should be at = {Day2.Part(isPartTwo: false)}");
             Console.WriteLine("That can't be right!");
-            Console.WriteLine($"If we consider up and down to affect our aim we're at = {Day2.Part(isPartTwo: true)}");
+            Console.WriteLine($"If we consider up and down to effect our aim we're at = {Day2.Part(isPartTwo: true)}");
 
             Console.WriteLine("\nThe submarine is making odd creaking noises; run a diagnostic report...");
             Console.WriteLine($"Power consumption = {Day3.Part1()}");
@@ -29,6 +29,9 @@ namespace aoc_cs
 
             Console.WriteLine($"\nOptimal crab fuel usage for linear fuel consumption = {Day7.Part1()}");
             Console.WriteLine($"Optimal crab fuel usage for triangular fuel consumption =  = {Day7.Part2()}");
+
+            Console.WriteLine($"\nNumber of digits that appear that use a unique number of segments = {Day8.Part1()}");
+            Console.WriteLine($"Total of all 4-digit output values = {Day8.Part2()}");
         }
     }
 }

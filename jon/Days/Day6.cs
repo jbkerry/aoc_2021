@@ -1,8 +1,6 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Numerics;
 
 namespace Days
 {
@@ -29,7 +27,7 @@ namespace Days
 
         public static decimal Part2() {
             List<decimal> fishAtDays = new List<decimal> {0, 0, 0, 0, 0, 0, 0, 0, 0};
-            List<int> fishNumbers = lines[0].Split(",").Select(int.Parse).ToList();
+            IEnumerable<int> fishNumbers = lines[0].Split(",").Select(int.Parse);
             foreach (int dayIndex in fishNumbers) {
                 fishAtDays[dayIndex] += 1;
             }
