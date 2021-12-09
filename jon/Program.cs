@@ -32,6 +32,9 @@ namespace aoc_cs
 
             Console.WriteLine($"\nNumber of digits that appear that use a unique number of segments = {Day8.Part1()}");
             Console.WriteLine($"Total of all 4-digit output values = {Day8.Part2()}");
+
+            Console.WriteLine($"\nSum of risk levels of lowest points = {Day9.Part1()}");
+            Console.WriteLine($"Size of the largest three basins multiplied together = {Day9.Part2()}");
         }
     }
 }
