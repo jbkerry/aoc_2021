@@ -9,7 +9,7 @@ namespace Days
     {
         static string inputPath = @"C:\git\aoc2021\day7_input.txt";
         static string[] lines = File.ReadAllLines(inputPath);
-        static IEnumerable<int> crabPositions = lines[0].Split(",").Select(int.Parse);
+        static IEnumerable<Int64> crabPositions = lines[0].Split(",").Select(Int64.Parse);
         public static double Part1() {
             double median = calculateMedian(crabPositions);
             return calculateTotalDistanceFrom(median, crabPositions, "linear");
@@ -20,7 +20,7 @@ namespace Days
             return calculateTotalDistanceFrom(mean, crabPositions, "triangular");
         }
 
-        static double calculateTotalDistanceFrom(double value, IEnumerable<int> numbers, string method) {
+        static double calculateTotalDistanceFrom(double value, IEnumerable<Int64> numbers, string method) {
             double optimalDistance = 0;
             foreach (int number in numbers) {
                 double distanceFromValue = Math.Abs(number - value);
@@ -34,7 +34,7 @@ namespace Days
             return optimalDistance;
         }
 
-        static double calculateMedian(IEnumerable<int> numbers) {
+        public static double calculateMedian(IEnumerable<Int64> numbers) {
             int halfIndex = numbers.Count() / 2;
             var sortedNumbers = numbers.OrderBy(n=>n);
             if ((numbers.Count() % 2) == 0) {
@@ -43,7 +43,7 @@ namespace Days
             return sortedNumbers.ElementAt(halfIndex);
         }
 
-        static double calculateMean(IEnumerable<int> numbers) {
+        static double calculateMean(IEnumerable<Int64> numbers) {
             double mean = Convert.ToDouble(numbers.Sum()) / numbers.Count();
             return Math.Floor(mean);
         }

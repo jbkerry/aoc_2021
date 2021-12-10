@@ -35,6 +35,9 @@ namespace aoc_cs
 
             Console.WriteLine($"\nSum of risk levels of lowest points = {Day9.Part1()}");
             Console.WriteLine($"Size of the largest three basins multiplied together = {Day9.Part2()}");
+
+            Console.WriteLine($"\nDay10, part1 = {Day10.Part(1)}");
+            Console.WriteLine($"Day10, part2 = {Day10.Part(2)}");
         }
     }
 }
