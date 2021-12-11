@@ -7,8 +7,8 @@ namespace Days
 {
     class Day9
     {
-        
-        static int[,] caveHeights = generate2dArray();
+        static string inputPath = @"C:\git\aoc2021\day9_input.txt";
+        static int[,] caveHeights = generate2dArray(inputPath);
         static List<int[]> lowPoints = findLowPoints(caveHeights);
 
         public static int Part1() {
@@ -61,8 +61,7 @@ namespace Days
             return basinSizes.Take(3).Aggregate((a, x) => a * x);
         }
 
-        static int[,] generate2dArray() {
-            string inputPath = @"C:\git\aoc2021\day9_input.txt";
+        public static int[,] generate2dArray(string inputPath) {
             string[] lines = File.ReadAllLines(inputPath);
             int[,] caveHeights = new int[lines.Count(),lines[0].Length];
             int rowIdx = 0;

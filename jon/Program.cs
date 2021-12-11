@@ -38,6 +38,9 @@ namespace aoc_cs
 
             Console.WriteLine($"\nDay10, part1 = {Day10.Part(1)}");
             Console.WriteLine($"Day10, part2 = {Day10.Part(2)}");
+
+            Console.WriteLine($"\nDay11, part1 = {Day11.Part(1)}");
+            Console.WriteLine($"Day11, part2 = {Day11.Part(2)}");
         }
     }
 }
